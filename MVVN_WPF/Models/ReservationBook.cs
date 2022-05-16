@@ -14,6 +14,7 @@ namespace MVVN_WPF.Models
         {
             _reservations = new List<Reservation>();
         }
+        public List<Reservation> GetAllReservations() {   return _reservations;  }
         public IEnumerable<Reservation> GEtReservationForUser(string username)
         {
             return _reservations.Where(r=> r.Usermame == username);

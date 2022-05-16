@@ -16,6 +16,10 @@ namespace MVVN_WPF.Models
             Name = name;
             _reservationBook = new ReservationBook();
         }
+        public List<Reservation>GetAllReservations()
+        {
+            return _reservationBook.GetAllReservations();
+        }
         public IEnumerable<Reservation> GetReservationsForUser(string username)
         {
             return _reservationBook.GEtReservationForUser(username);
