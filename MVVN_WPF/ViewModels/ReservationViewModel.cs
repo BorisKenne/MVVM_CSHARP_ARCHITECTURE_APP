@@ -12,8 +12,8 @@ namespace MVVN_WPF.ViewModels
         readonly Reservation _reservation;
         public string RoomID => _reservation.RoomID.RoomNumber.ToString();
         public string Usermame => _reservation.Usermame.ToString();
-        public DateTime StartTime => _reservation.StartTime;
-        public DateTime EndTime => _reservation.EndTime;
+        public string StartTime => _reservation.StartTime.ToString("d");
+        public string EndTime => _reservation.EndTime.ToString("d");
 
         public ReservationViewModel(Reservation reservation)
         {
