@@ -13,34 +13,34 @@ namespace MVVN_WPF.ViewModels
         public string Username
         {
             get { return _username; }
-            set { _username = value; OnPropertyChanged(Username); }
+            set { _username = value; OnPropertyChanged(Username); Console.WriteLine("Changing property username"); }
         }
 
         private string _roomNumber;
         public string RoomNumber
         {
             get { return _roomNumber; }
-            set { _roomNumber = value; OnPropertyChanged(RoomNumber); }
+            set { _roomNumber = value; OnPropertyChanged(RoomNumber); Console.WriteLine("Changing property RoomNumber"); }
         }
 
         private string _floorNumber;
         public string FloorNumber
         {
             get { return _floorNumber; }
-            set { _floorNumber = value; OnPropertyChanged(FloorNumber); }
+            set { _floorNumber = value; OnPropertyChanged(FloorNumber); Console.WriteLine("Changing property FloorNumber"); }
         }
 
         private DateTime _startDate;
         public DateTime StartDate
         {
             get { return _startDate; }
-            set { _startDate = value; OnPropertyChanged(nameof(StartDate)); }
+            set { _startDate = value; OnPropertyChanged(nameof(StartDate)); Console.WriteLine("Changing property StartDate"); }
         }
         private DateTime _endDate;
         public DateTime EndDate
         {
             get { return _endDate; }
-            set { _endDate = value; OnPropertyChanged(nameof(EndDate)); }
+            set { _endDate = value; OnPropertyChanged(nameof(EndDate)); Console.WriteLine("Changing property EndDate"); }
         }
 
         public ICommand SubmitCommand { get; }

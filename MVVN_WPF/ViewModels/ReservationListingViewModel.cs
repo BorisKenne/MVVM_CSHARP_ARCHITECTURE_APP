@@ -24,21 +24,25 @@ namespace MVVN_WPF.ViewModels
                                                                "Singleton",
                                                                DateTime.Now,
                                                                DateTime.Now)));
+            Console.WriteLine("Add reservation");
             _reservation.Add(new ReservationViewModel(new Reservation(
                                                                new RoomID(3, 4),
                                                                "Joe",
                                                                DateTime.Now,
                                                                DateTime.Now)));
+            Console.WriteLine("Add reservation");
             _reservation.Add(new ReservationViewModel(new Reservation(
                                                                new RoomID(5, 6),
                                                                "Bob",
                                                                DateTime.Now,
                                                                DateTime.Now)));
+            Console.WriteLine("Add reservation");
             _reservation.Add(new ReservationViewModel(new Reservation(
                                                                new RoomID(7, 8),
                                                                "Mary",
                                                                DateTime.Now,
                                                                DateTime.Now)));
+            Console.WriteLine("Add reservation");
 
         }
     }
