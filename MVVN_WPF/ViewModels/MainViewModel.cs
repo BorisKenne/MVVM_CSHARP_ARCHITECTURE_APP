@@ -12,7 +12,7 @@ namespace MVVN_WPF.ViewModels
 
         public MainViewModel()
         {
-            CurrentViewModel = new MakeReservationViewModel();
+            CurrentViewModel = new ReservationListingViewModel();
         }
     }
 }
