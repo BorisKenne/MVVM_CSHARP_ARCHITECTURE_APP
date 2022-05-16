@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using MVVN_WPF.Exceptions;
 
-namespace MVVN_WPF.Models
-{
+namespace MVVN_WPF.Models 
+{ 
     public class ReservationBook
     {
         private readonly  List<Reservation> _reservations;

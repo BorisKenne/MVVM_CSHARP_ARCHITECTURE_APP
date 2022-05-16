@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:MVVN_WPF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="TextBox">
+            <Setter Property="Padding" Value="2"/>
+        </Style>
     </Application.Resources>
 </Application>

@@ -19,3 +19,9 @@ C:\Users\DELL\Desktop\C# Learning\MVVN_WPF\MVVN_WPF\obj\Debug\net6.0-windows\ref
 C:\Users\DELL\Desktop\C# Learning\MVVN_WPF\MVVN_WPF\obj\Debug\net6.0-windows\MVVN_WPF.pdb
 C:\Users\DELL\Desktop\C# Learning\MVVN_WPF\MVVN_WPF\obj\Debug\net6.0-windows\MVVN_WPF.genruntimeconfig.cache
 C:\Users\DELL\Desktop\C# Learning\MVVN_WPF\MVVN_WPF\obj\Debug\net6.0-windows\ref\MVVN_WPF.dll
+C:\Users\DELL\Desktop\C# Learning\MVVN_WPF\MVVN_WPF\obj\Debug\net6.0-windows\Views\MakeReservationView.g.cs
+C:\Users\DELL\Desktop\C# Learning\MVVN_WPF\MVVN_WPF\obj\Debug\net6.0-windows\Views\ReservationListingView.g.cs
+C:\Users\DELL\Desktop\C# Learning\MVVN_WPF\MVVN_WPF\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\DELL\Desktop\C# Learning\MVVN_WPF\MVVN_WPF\obj\Debug\net6.0-windows\Views\MakeReservationView.baml
+C:\Users\DELL\Desktop\C# Learning\MVVN_WPF\MVVN_WPF\obj\Debug\net6.0-windows\Views\ReservationListingView.baml
+C:\Users\DELL\Desktop\C# Learning\MVVN_WPF\MVVN_WPF\obj\Debug\net6.0-windows\App.baml

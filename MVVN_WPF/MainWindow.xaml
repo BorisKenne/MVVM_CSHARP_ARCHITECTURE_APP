@@ -4,13 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MVVN_WPF"
+        xmlns:Views="clr-namespace:MVVN_WPF.Views"
         mc:Ignorable="d"
+        FontSize="14"
         Title="RESERVATION" Height="450" Width="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-
+    <Grid Margin="20" MaxWidth="600">
+        <Views:MakeReservationView/>
     </Grid>
 </Window>
