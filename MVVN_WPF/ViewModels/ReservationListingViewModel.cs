@@ -13,7 +13,7 @@ namespace MVVN_WPF.ViewModels
     {
         private readonly ObservableCollection<ReservationViewModel> _reservation;
 
-        public IEnumerable<ReservationViewModel> reservationNumerable => _reservation;
+        public IEnumerable<ReservationViewModel> reservationEnumerable => _reservation;
         public ICommand MakeReservationCommand { get; }
         public ReservationListingViewModel()
         {

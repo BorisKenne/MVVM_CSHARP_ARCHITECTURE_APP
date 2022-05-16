@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using MVVN_WPF.Exceptions;
 using MVVN_WPF.Models;
+using MVVN_WPF.ViewModels;
 
 namespace MVVN_WPF
 {
@@ -17,16 +18,11 @@ namespace MVVN_WPF
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            Hotel hotel = new Hotel("Singleteon Suites");
-            try
+            MainWindow = new MainWindow()
             {
-                hotel.MakeReservation(new Reservation(new RoomID(1, 3), "SingletonSean", new DateTime(2000, 1, 1), new DateTime(2000, 1, 2)));
-                hotel.MakeReservation(new Reservation(new RoomID(1, 3), "SingletonSean", new DateTime(2000, 1, 3), new DateTime(2000, 1, 4)));
-            }catch (ReservationConflictException ex)
-            {
-
-            }
-            IEnumerable<Reservation> reservations = hotel.GetReservationsForUser("SingletonSean");
+                DataContext = new MainViewModel()
+            };
+            MainWindow.Show();
             base.OnStartup(e);
         }
     }

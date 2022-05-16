@@ -1,7 +1,7 @@
 ﻿MVVN_WPF
 1.0.0.0
 
-winexe
+exe
 C#
 .cs
 C:\Users\DELL\Desktop\C# Learning\MVVN_WPF\MVVN_WPF\obj\Debug\net6.0-windows\
@@ -16,5 +16,5 @@ C:\Users\DELL\Desktop\C# Learning\MVVN_WPF\MVVN_WPF\App.xaml
 1941645785384
 MainWindow.xaml;Views\MakeReservationView.xaml;Views\ReservationListingView.xaml;
 
-True
+False
 
