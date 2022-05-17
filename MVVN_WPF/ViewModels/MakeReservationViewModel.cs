@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using MVVN_WPF.Commands;
+using MVVN_WPF.Models;
 
 namespace MVVN_WPF.ViewModels
 {
@@ -17,18 +18,18 @@ namespace MVVN_WPF.ViewModels
             set { _username = value; OnPropertyChanged(Username); Console.WriteLine("Changing property username"); }
         }
 
-        private string _roomNumber;
-        public string RoomNumber
+        private int _roomNumber;
+        public int RoomNumber
         {
             get { return _roomNumber; }
-            set { _roomNumber = value; OnPropertyChanged(RoomNumber); Console.WriteLine("Changing property RoomNumber"); }
+            set { _roomNumber = value; OnPropertyChanged("RoomNumber"); Console.WriteLine("Changing property RoomNumber"); }
         }
 
-        private string _floorNumber;
-        public string FloorNumber
+        private int _floorNumber;
+        public int FloorNumber
         {
             get { return _floorNumber; }
-            set { _floorNumber = value; OnPropertyChanged(FloorNumber); Console.WriteLine("Changing property FloorNumber"); }
+            set { _floorNumber = value; OnPropertyChanged(("FloorNumber")); Console.WriteLine("Changing property FloorNumber"); }
         }
 
         private DateTime _startDate;
@@ -47,9 +48,9 @@ namespace MVVN_WPF.ViewModels
         public ICommand SubmitCommand { get; }
         public ICommand CancelCommand { get; }
 
-        public MakeReservationViewModel()
+        public MakeReservationViewModel(Hotel hotel)
         {
-            SubmitCommand = new MakeReservationCommand();
+            SubmitCommand = new MakeReservationCommand(this,hotel);
         }
     }
 }
