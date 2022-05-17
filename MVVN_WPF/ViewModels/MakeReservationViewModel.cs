@@ -29,16 +29,16 @@ namespace MVVN_WPF.ViewModels
         public int FloorNumber
         {
             get { return _floorNumber; }
-            set { _floorNumber = value; OnPropertyChanged(("FloorNumber")); Console.WriteLine("Changing property FloorNumber"); }
+            set { _floorNumber = value; OnPropertyChanged("FloorNumber"); Console.WriteLine("Changing property FloorNumber"); }
         }
 
-        private DateTime _startDate;
+        private DateTime _startDate = new DateTime(2021,1,1);
         public DateTime StartDate
         {
             get { return _startDate; }
             set { _startDate = value; OnPropertyChanged(nameof(StartDate)); Console.WriteLine("Changing property StartDate"); }
         }
-        private DateTime _endDate;
+        private DateTime _endDate = new DateTime(2021,1,1);
         public DateTime EndDate
         {
             get { return _endDate; }

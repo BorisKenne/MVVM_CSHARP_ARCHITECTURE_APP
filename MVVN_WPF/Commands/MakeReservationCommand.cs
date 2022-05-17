@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using MVVN_WPF.Exceptions;
 using MVVN_WPF.Models;
 using MVVN_WPF.ViewModels;
 
@@ -25,7 +27,15 @@ namespace MVVN_WPF.Commands
                                                       _makeReservationViewModel.StartDate, 
                                                       _makeReservationViewModel.EndDate
                                                       );
-            _hotel.MakeReservation(reservation);
+            try
+            {
+                _hotel.MakeReservation(reservation);
+                MessageBox.Show("Successfully reserved room","Success",MessageBoxButton.OK,MessageBoxImage.Information);
+            }catch (ReservationConflictException)
+            {
+                MessageBox.Show("SThis room is alredy taken", "error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            
         }
     }
 }
