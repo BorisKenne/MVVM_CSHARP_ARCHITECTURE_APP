@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using MVVN_WPF.Commands;
 
 namespace MVVN_WPF.ViewModels
 {
@@ -48,7 +49,7 @@ namespace MVVN_WPF.ViewModels
 
         public MakeReservationViewModel()
         {
-
+            SubmitCommand = new MakeReservationCommand();
         }
     }
 }
