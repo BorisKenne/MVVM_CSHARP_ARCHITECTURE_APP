@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using MVVN_WPF.Models;
+using MVVN_WPF.Commands;
 
 namespace MVVN_WPF.ViewModels
 {
@@ -43,6 +44,8 @@ namespace MVVN_WPF.ViewModels
                                                                DateTime.Now,
                                                                DateTime.Now)));
             Console.WriteLine("Add reservation");
+
+            MakeReservationCommand = new NavigationCommand();
 
         }
     }

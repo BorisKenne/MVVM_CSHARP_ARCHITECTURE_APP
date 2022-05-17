@@ -20,6 +20,10 @@ namespace MVVN_WPF.Commands
             _makeReservationViewModel = makeReservationViewModel;
             _hotel = hotel;
         }
+        public override bool CanExecute(object parameter)
+        {
+            return base.CanExecute(parameter); // implement the activation of button !!
+        }
         public override void Execute(object parameter)
         {
             Reservation reservation = new Reservation(new RoomID(_makeReservationViewModel.RoomNumber, _makeReservationViewModel.FloorNumber), 
