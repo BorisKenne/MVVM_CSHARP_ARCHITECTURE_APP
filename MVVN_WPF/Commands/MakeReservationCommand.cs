@@ -33,7 +33,7 @@ namespace MVVN_WPF.Commands
                 MessageBox.Show("Successfully reserved room","Success",MessageBoxButton.OK,MessageBoxImage.Information);
             }catch (ReservationConflictException)
             {
-                MessageBox.Show("SThis room is alredy taken", "error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("SThis room is alredy taken", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             
         }
