@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using MVVN_WPF.Commands;
 using MVVN_WPF.Models;
+using MVVN_WPF.Stores;
 
 namespace MVVN_WPF.ViewModels
 {
@@ -48,10 +45,10 @@ namespace MVVN_WPF.ViewModels
         public ICommand SubmitCommand { get; }
         public ICommand CancelCommand { get; }
 
-        public MakeReservationViewModel(Hotel hotel)
+        public MakeReservationViewModel(Hotel hotel,NavigationStore navigationStore,Func<ReservationListingViewModel> createReservationListingViewModel)
         {
             SubmitCommand = new MakeReservationCommand(this,hotel);
-            CancelCommand = new CancelMakeReservationCommand();
+            CancelCommand = new NavigateCommand(navigationStore, createReservationListingViewModel);
         }
     }
 }
