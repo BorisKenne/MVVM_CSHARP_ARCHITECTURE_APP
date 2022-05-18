@@ -16,6 +16,11 @@ namespace MVVN_WPF.ViewModels
         public MainViewModel(NavigationStore navigationStore)
         {
             _navigationStore = navigationStore;
+            _navigationStore.CurrentViewModelChanged += OncurrentViewModelChanged;
+        }
+        private void OncurrentViewModelChanged()
+        {
+            OnPropertyChanged(nameof(CurrentViewModel));
         }
     }
 }
