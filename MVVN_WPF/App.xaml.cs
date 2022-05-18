@@ -27,7 +27,7 @@ namespace MVVN_WPF
         }
         protected override void OnStartup(StartupEventArgs e)
         {
-            _navigationStore.CurrentViewModel = new ReservationListingViewModel();
+            _navigationStore.CurrentViewModel = new ReservationListingViewModel(_navigationStore);
             MainWindow = new MainWindow()
             {
                 DataContext = new MainViewModel(_navigationStore)

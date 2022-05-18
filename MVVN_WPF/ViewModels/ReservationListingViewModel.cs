@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using MVVN_WPF.Models;
 using MVVN_WPF.Commands;
+using MVVN_WPF.Stores;
 
 namespace MVVN_WPF.ViewModels
 {
@@ -16,7 +17,7 @@ namespace MVVN_WPF.ViewModels
 
         public IEnumerable<ReservationViewModel> reservationEnumerable => _reservation;
         public ICommand MakeReservationCommand { get; }
-        public ReservationListingViewModel()
+        public ReservationListingViewModel(NavigationStore navigationStore)
         {
             _reservation = new ObservableCollection<ReservationViewModel>();
 
@@ -45,7 +46,7 @@ namespace MVVN_WPF.ViewModels
                                                                DateTime.Now)));
             Console.WriteLine("Add reservation");
 
-            MakeReservationCommand = new NavigationCommand();
+            MakeReservationCommand = new NavigateCommand(navigationStore);
 
         }
     }
