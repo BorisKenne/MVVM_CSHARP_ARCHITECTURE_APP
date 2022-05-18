@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using MVVN_WPF.Exceptions;
 using MVVN_WPF.Models;
+using MVVN_WPF.Services;
 using MVVN_WPF.Stores;
 using MVVN_WPF.ViewModels;
 
@@ -27,7 +28,7 @@ namespace MVVN_WPF
         }
         protected override void OnStartup(StartupEventArgs e)
         {
-            _navigationStore.CurrentViewModel = new ReservationListingViewModel(_navigationStore,createMakeReservationViewModel);
+            _navigationStore.CurrentViewModel = new ReservationListingViewModel(_hotel,new NavigationService(_navigationStore, createMakeReservationViewModel));
             MainWindow = new MainWindow()
             {
                 DataContext = new MainViewModel(_navigationStore)
@@ -37,11 +38,11 @@ namespace MVVN_WPF
         }
         private MakeReservationViewModel createMakeReservationViewModel()
         {
-            return new MakeReservationViewModel(_hotel,_navigationStore, createReservationListingViewModel);
+            return new MakeReservationViewModel(_hotel,new NavigationService(_navigationStore, createReservationListingViewModel));
         }
         private ReservationListingViewModel createReservationListingViewModel()
         {
-            return new ReservationListingViewModel(_navigationStore, createMakeReservationViewModel);
+            return new ReservationListingViewModel(_hotel,new NavigationService(_navigationStore, createMakeReservationViewModel));
         }
 
     }
