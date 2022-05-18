@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using MVVN_WPF.Exceptions;
 using MVVN_WPF.Models;
+using MVVN_WPF.Stores;
 using MVVN_WPF.ViewModels;
 
 namespace MVVN_WPF
@@ -17,16 +18,19 @@ namespace MVVN_WPF
     public partial class App : Application
     {
         private readonly Hotel _hotel;
+        private readonly NavigationStore _navigationStore;
 
         public App()
         {
             _hotel = new Hotel("Boris Hotel");
+            _navigationStore = new NavigationStore();
         }
         protected override void OnStartup(StartupEventArgs e)
         {
+            _navigationStore.CurrentViewModel = new ReservationListingViewModel();
             MainWindow = new MainWindow()
             {
-                DataContext = new MainViewModel(_hotel)
+                DataContext = new MainViewModel(_navigationStore)
             };
             MainWindow.Show();
             base.OnStartup(e);
